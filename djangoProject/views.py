@@ -16,3 +16,5 @@ class Maintenance(TemplateView):
 class NotFound(TemplateView):
     template_name = "404.html"
 
+class HomePage(TemplateView):
+    template_name = "home.html"
