@@ -1,0 +1,22 @@
+{% extends "base_list.html" %}
+
+{% block list_title %} Blog Post {% endblock %}
+{% block content_title %} Blog post {% endblock %}
+
+{% block table_head %}
+    <th>Title</th>
+    <th>Author</th>
+    <th>Views</th>
+    <th>Actions</th>
+{% endblock %}
+
+{% block table_body %}
+    {% for blog_post in object_list %}
+        <tr>
+            <td> {{ blog_post.title }}</td>
+            <td> {{ blog_post.author }}</td>
+            <td> {{ blog_post.views}}</td>
+            <td><a href="{% url "blog:blogpost-detail" blog_post.pk %}">detail</a></td>
+        </tr>
+    {% endfor%}
+{% endblock %}

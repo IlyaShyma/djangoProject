@@ -8,3 +8,5 @@ class BlogPost(models.Model):
     author = models.CharField(max_length=255)
     title = models.CharField(max_length=255)
     content = models.TextField()
+    views = models.IntegerField(default=0)
+
