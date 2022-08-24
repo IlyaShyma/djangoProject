@@ -18,6 +18,7 @@ from django.urls import include, path
 from djangoProject.views import Maintenance, NotFound
 
 urlpatterns = [
+
     path("admin/", admin.site.urls),
     path("maintenance", Maintenance.as_view()),
     path("blog/", include("blog.urls")),
